@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="990dda9a-972f-4bb1-876f-7917c5c6bb1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Book.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/BookList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/NavigationBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Welcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/MyToast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Teacher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/TeacherList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/images/gerb-psu.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceDiscipline/HoursLPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceDiscipline/HoursLPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceFixing/FixingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceHibernate/FixingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceDiscipline/Discipline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceDiscipline/Discipline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceDiscipline/HoursLPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceDiscipline/HoursLPL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceFixing/Fixing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceFixing/Fixing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/alex/Controllers/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/alex/Controllers/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Book.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/NavigationBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/alex/Controllers/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/alex/Controllers/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceFixing/FixingRepository.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,8 +107,12 @@
     <property name="project.structure.proportion" value="0.14965986" />
     <property name="project.structure.side.proportion" value="0.34712642" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src/images" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.project.alex.ServiceHibernate" />
     </key>
@@ -151,7 +157,11 @@
       <workItem from="1585118833318" duration="6735000" />
       <workItem from="1585201999249" duration="1423000" />
       <workItem from="1585207487959" duration="9548000" />
-      <workItem from="1585641548614" duration="22782000" />
+      <workItem from="1585641548614" duration="31179000" />
+      <workItem from="1585727249983" duration="95000" />
+      <workItem from="1585736207106" duration="21000" />
+      <workItem from="1585737584484" duration="15481000" />
+      <workItem from="1585808480722" duration="31562000" />
     </task>
     <servers />
   </component>
@@ -167,42 +177,46 @@
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="440" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.985@0.23.1680.985" timestamp="1585118865570" />
+    <state x="550" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585676009007">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="550" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.985@0.23.1680.985" timestamp="1585676009007" />
     <state x="653" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1585161232713">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="653" y="226" key="#com.intellij.ide.util.MemberChooser/0.23.1680.985@0.23.1680.985" timestamp="1585161232713" />
-    <state width="1638" height="328" key="GridCell.Tab.0.bottom" timestamp="1585235389793">
+    <state width="839" height="336" key="GridCell.Tab.0.bottom" timestamp="1585852000485">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.bottom/0.23.1680.985@0.23.1680.985" timestamp="1585235389793" />
-    <state width="1638" height="328" key="GridCell.Tab.0.center" timestamp="1585235389792">
+    <state width="839" height="336" key="GridCell.Tab.0.bottom/0.23.1680.985@0.23.1680.985" timestamp="1585852000485" />
+    <state width="839" height="336" key="GridCell.Tab.0.center" timestamp="1585852000484">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.center/0.23.1680.985@0.23.1680.985" timestamp="1585235389792" />
-    <state width="1638" height="328" key="GridCell.Tab.0.left" timestamp="1585235389792">
+    <state width="839" height="336" key="GridCell.Tab.0.center/0.23.1680.985@0.23.1680.985" timestamp="1585852000484" />
+    <state width="839" height="336" key="GridCell.Tab.0.left" timestamp="1585852000483">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.left/0.23.1680.985@0.23.1680.985" timestamp="1585235389792" />
-    <state width="1638" height="328" key="GridCell.Tab.0.right" timestamp="1585235389793">
+    <state width="839" height="336" key="GridCell.Tab.0.left/0.23.1680.985@0.23.1680.985" timestamp="1585852000483" />
+    <state width="839" height="336" key="GridCell.Tab.0.right" timestamp="1585852000484">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.right/0.23.1680.985@0.23.1680.985" timestamp="1585235389793" />
-    <state width="1638" height="328" key="GridCell.Tab.1.bottom" timestamp="1585235389794">
+    <state width="839" height="336" key="GridCell.Tab.0.right/0.23.1680.985@0.23.1680.985" timestamp="1585852000484" />
+    <state width="839" height="336" key="GridCell.Tab.1.bottom" timestamp="1585852000485">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.1.bottom/0.23.1680.985@0.23.1680.985" timestamp="1585235389794" />
-    <state width="1638" height="328" key="GridCell.Tab.1.center" timestamp="1585235389793">
+    <state width="839" height="336" key="GridCell.Tab.1.bottom/0.23.1680.985@0.23.1680.985" timestamp="1585852000485" />
+    <state width="839" height="336" key="GridCell.Tab.1.center" timestamp="1585852000485">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.1.center/0.23.1680.985@0.23.1680.985" timestamp="1585235389793" />
-    <state width="1638" height="328" key="GridCell.Tab.1.left" timestamp="1585235389793">
+    <state width="839" height="336" key="GridCell.Tab.1.center/0.23.1680.985@0.23.1680.985" timestamp="1585852000485" />
+    <state width="839" height="336" key="GridCell.Tab.1.left" timestamp="1585852000485">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.1.left/0.23.1680.985@0.23.1680.985" timestamp="1585235389793" />
-    <state width="1638" height="328" key="GridCell.Tab.1.right" timestamp="1585235389794">
+    <state width="839" height="336" key="GridCell.Tab.1.left/0.23.1680.985@0.23.1680.985" timestamp="1585852000485" />
+    <state width="839" height="336" key="GridCell.Tab.1.right" timestamp="1585852000485">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.1.right/0.23.1680.985@0.23.1680.985" timestamp="1585235389794" />
+    <state width="839" height="336" key="GridCell.Tab.1.right/0.23.1680.985@0.23.1680.985" timestamp="1585852000485" />
     <state width="1638" height="328" key="GridCell.Tab.2.bottom" timestamp="1585235389795">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
@@ -223,10 +237,10 @@
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state width="239" height="498" key="HiddenNamespacesPopup/0.23.1680.985@0.23.1680.985" timestamp="1585118977434" />
-    <state x="341" y="154" key="SettingsEditor" timestamp="1585132725935">
+    <state x="341" y="154" key="SettingsEditor" timestamp="1585685772919">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state x="341" y="154" key="SettingsEditor/0.23.1680.985@0.23.1680.985" timestamp="1585132725935" />
+    <state x="341" y="154" key="SettingsEditor/0.23.1680.985@0.23.1680.985" timestamp="1585685772919" />
     <state x="730" y="418" width="347" height="226" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1585227766875">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
@@ -235,24 +249,13 @@
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="702" y="286" key="com.intellij.database.view.ui.DbObjectDialog/0.23.1680.985@0.23.1680.985" timestamp="1585118961908" />
-    <state x="494" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1585641548737">
+    <state x="494" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1585808482002">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state x="494" y="296" key="com.intellij.ide.util.TipDialog/0.23.1680.985@0.23.1680.985" timestamp="1585641548737" />
+    <state x="494" y="296" key="com.intellij.ide.util.TipDialog/0.23.1680.985@0.23.1680.985" timestamp="1585808482002" />
     <state x="925" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1585667322514">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="925" y="240" width="670" height="676" key="search.everywhere.popup/0.23.1680.985@0.23.1680.985" timestamp="1585667322514" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/project/alex/Controllers/TeacherController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

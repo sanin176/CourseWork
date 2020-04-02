@@ -11,6 +11,8 @@ import Welcome from "./components/Welcome"
 import Footer from "./components/Footer"
 import Book from "./components/Book";
 import BookList from "./components/BookList";
+import Teacher from "./components/Teacher";
+import TeacherList from "./components/TeacherList";
 
 function App() {
     const marginTop = {
@@ -25,8 +27,11 @@ function App() {
                   <Col lg={12} style={marginTop}>
                       <Switch>
                           <Route path="/" exact component={Welcome}/>
-                          <Route path="/add" exact component={Book}/>
-                          <Route path="/list" exact component={BookList}/>
+                          {/*<Route path="/add" exact component={Book}/>*/}
+                          {/*<Route path="/list" exact component={BookList}/>*/}
+
+                          <Route path="/add" exact component={Teacher}/>
+                          <Route path="/list" exact component={TeacherList}/>
                       </Switch>
                   </Col>
               </Row>

@@ -13,7 +13,7 @@ export default class Book extends Component {
             coverPhotoURL:'',
             isbnNumber:'',
             price:'',
-            language:'',
+            language:''
         };
         this.bookChange = this.bookChange.bind(this);
         this.submitBook = this.submitBook.bind(this);

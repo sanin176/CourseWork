@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3001")
 public class TeacherController {
 
     @Autowired
@@ -31,6 +32,17 @@ public class TeacherController {
     public void createDiscipline(@RequestBody Discipline d){
         //disciplineRepository.save(d);
         disciplineRepository.save(d);
+    }
+
+    @RequestMapping(value = { "/teacher"}, method = RequestMethod.GET)
+    public @ResponseBody Iterable<Teacher> getAllTeacher(){
+        return teacherRepository.findAll();
+    }
+
+    @RequestMapping(value = { "/delete/{id}"}, method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteTeacherByID(@PathVariable("id") int id){
+        teacherRepository.deleteById(id);
     }
 
 }
