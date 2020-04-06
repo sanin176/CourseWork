@@ -14,8 +14,4 @@ public class HoursLPL {
     private int hoursLabs;
     private int hoursLecture;
     private int hoursPractice;
-
-    private String laba = "Labs";
-    private String lecture = "Lectures";
-    private String practice = "Practice";
 }

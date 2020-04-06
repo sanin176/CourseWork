@@ -14,8 +14,8 @@ public class Discipline {
     private int id;
     private String name;
     private String forWhichSpecialty;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private HoursLPL hoursLPL;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private HoursZCE hoursZCE;
 }

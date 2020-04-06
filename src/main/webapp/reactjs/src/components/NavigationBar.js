@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import {Navbar, Nav, NavbarBrand} from "react-bootstrap";
+import {Navbar, Nav} from "react-bootstrap";
 import {Link} from 'react-router-dom';
-import PSU from '../images/gerb-psu.png'
+import PSU from '../images/fit-gerb.jpg'
 
 export default class NavigationBar extends Component {
     render() {
@@ -17,6 +17,12 @@ export default class NavigationBar extends Component {
                 <Nav className="mr-auto">
                     <Link to={"add"} className="nav-link">Add Teacher</Link>
                     <Link to={"list"} className="nav-link">Look List </Link>
+
+                    <Link to={"addDis"} className="nav-link">Add Discipline</Link>
+                    <Link to={"listDis"} className="nav-link">Look List Discipline</Link>
+
+                    <Link to={"addFix"} className="nav-link">Add Fixing</Link>
+                    <Link to={"listFix"} className="nav-link">Look List Fixing</Link>
                 </Nav>
             </Navbar>
         )

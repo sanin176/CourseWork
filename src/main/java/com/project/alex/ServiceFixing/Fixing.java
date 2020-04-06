@@ -1,7 +1,6 @@
 package com.project.alex.ServiceFixing;
 
 import com.project.alex.ServiceDiscipline.Discipline;
-import com.project.alex.ServiceDiscipline.HoursLPL;
 import com.project.alex.ServiceTeacher.Teacher;
 import lombok.Data;
 
@@ -13,10 +12,11 @@ public class Fixing {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO, generator = "fix")
     private int id;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER)
     private Discipline discipline;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER)
     private Teacher teacher;
-    @OneToOne(cascade = CascadeType.ALL)
-    private HoursLPL hoursLPL;
+    private String hoursLPL;
+    @Enumerated(EnumType.STRING)
+    private ViewWork viewWork;
 }

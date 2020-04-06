@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -9,10 +8,12 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import NavigationBar from "./components/NavigationBar";
 import Welcome from "./components/Welcome"
 import Footer from "./components/Footer"
-import Book from "./components/Book";
-import BookList from "./components/BookList";
 import Teacher from "./components/Teacher";
 import TeacherList from "./components/TeacherList";
+import Discipline from "./components/Discipline";
+import DisciplineList from "./components/DisciplineList";
+import Fixing from "./components/Fixing";
+import FixingList from "./components/FixingList";
 
 function App() {
     const marginTop = {
@@ -27,11 +28,18 @@ function App() {
                   <Col lg={12} style={marginTop}>
                       <Switch>
                           <Route path="/" exact component={Welcome}/>
-                          {/*<Route path="/add" exact component={Book}/>*/}
-                          {/*<Route path="/list" exact component={BookList}/>*/}
 
                           <Route path="/add" exact component={Teacher}/>
+                          <Route path="/edit/:id" exact component={Teacher}/>
                           <Route path="/list" exact component={TeacherList}/>
+
+                          <Route path="/addDis" exact component={Discipline}/>
+                          <Route path="/editDis/:id" exact component={Discipline}/>
+                          <Route path="/listDis" exact component={DisciplineList}/>
+
+                          <Route path="/addFix" exact component={Fixing}/>
+                          <Route path="/editFix/:id" exact component={Fixing}/>
+                          <Route path="/listFix" exact component={FixingList}/>
                       </Switch>
                   </Col>
               </Row>

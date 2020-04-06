@@ -1,6 +1,6 @@
 package com.project.alex.ServiceTeacher;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
