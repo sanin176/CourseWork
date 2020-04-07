@@ -51,7 +51,7 @@ export default class TeacherList extends Component {
             .then(response => {
                 if(response.data != null) {
                     this.setState({"show":true});
-                    setTimeout(() => this.setState({"show":false}), 500);
+                    setTimeout(() => this.setState({"show":false}), 3000);
                     //alert("Teacher deleted successfully.");
                     this.setState({
                         //teachers: this.state.teachers.filter(teacher => teacher.id !== teacherId)
@@ -134,44 +134,21 @@ export default class TeacherList extends Component {
                 <div style={{"display": this.state.show ? "block" : "none"}}>
                     <MyToast show = {this.state.show} message = {"Teacher Deleted Successfully."} type = {"danger"}/>
                 </div>
-                {/*<Card className={"border border-dark bg-dark text-white"}>*/}
                 <Card className={"border border-dark bg-light text-info"} style={marginBottom}>
                     <Card.Header><FontAwesomeIcon icon={faList}/> Teacher List</Card.Header>
                     <Card.Body>
                         <MDBDataTable className="text-info bg-light"
                                       scrollX
-                            //scrollY
                                       maxHeight="40vh"
-                            //maxWidth=""
                                       striped
                                       bordered
                                       small
                                       hover
                                       theadColor={"text-dark"}
                                       tbodyColor={"text-primary"}
-
-                            // borderless
-                            // //barReverse
-                            // autoWidth
-                            // displayEntries
-                            // entries={8}
-                            // fixed
-                            // entrieslabel={"tak"}
-                            // //info={false}
-                            // noBottomColumns={false}
-                            // pagesAmount={1}
-                            // paging={true}
-                            // responsive={false}
-                            // responsiveSm={true}
-                            // searchingLabel={"text"}
-                            // onSearch={"taks"}
-
                                       data={data}
                                       variant="dark"
-                            //searching={false}
-                            //sorting="false"
                                       pagination="false"
-                                      //red-text
                         />
 
                     </Card.Body>

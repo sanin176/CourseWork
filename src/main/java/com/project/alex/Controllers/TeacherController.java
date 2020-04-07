@@ -45,6 +45,7 @@ public class TeacherController {
     @RequestMapping(value = { "/deleteTeacher/{id}"}, method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteTeacherByID(@PathVariable("id") int id){
+        fixingRepository.deleteTeacher(teacherRepository.findById(id));
         teacherRepository.deleteById(id);
     }
 
@@ -76,6 +77,7 @@ public class TeacherController {
     @RequestMapping(value = { "/deleteDiscipline/{id}"}, method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteDisciplineByID(@PathVariable("id") int id){
+        fixingRepository.deleteDiscipline(disciplineRepository.findById(id));
         disciplineRepository.deleteById(id);
     }
 

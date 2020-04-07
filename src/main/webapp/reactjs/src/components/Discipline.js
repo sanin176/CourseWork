@@ -6,7 +6,7 @@ import {Card, Form, Button, Col} from "react-bootstrap";
 import MyToast from "./MyToast";
 import axios from 'axios';
 
-export default class Teacher extends Component {
+export default class Discipline extends Component {
     constructor(props) {
         super(props);
 

@@ -7,7 +7,7 @@ import { MDBDataTable } from 'mdbreact';
 import MyToast from "./MyToast";
 import {Link} from "react-router-dom";
 
-export default class TeacherList extends Component {
+export default class DisciplineList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -55,7 +55,7 @@ export default class TeacherList extends Component {
             .then(response => {
                 if(response.data != null) {
                     this.setState({"show":true});
-                    setTimeout(() => this.setState({"show":false}), 500);
+                    setTimeout(() => this.setState({"show":false}), 3000);
                     //alert("Teacher deleted successfully.");
                     this.setState({
                         //teachers: this.state.teachers.filter(teacher => teacher.id !== teacherId)
@@ -102,23 +102,6 @@ export default class TeacherList extends Component {
                     field: 'hoursLabs',
                     width: 100
                 },
-
-
-
-
-            //     name: discipline.name,
-            // forWhichSpecialty: discipline.forWhichSpecialty,
-            // hoursLabs: discipline.hoursLPL.hoursLabs,
-            // hoursLecture: discipline.hoursLPL.hoursLecture,
-            // hoursPractice: discipline.hoursLPL.hoursPractice,
-            // hoursCourse: discipline.hoursZCE.hoursCourse,
-            // hoursExam: discipline.hoursZCE.hoursExam,
-            // hoursZachet: discipline.hoursZCE.hoursZachet,
-
-
-
-
-
                 {
                     label: 'Hours lecture',
                     field: 'hoursLecture',
@@ -169,38 +152,16 @@ export default class TeacherList extends Component {
                     <Card.Body>
                         <MDBDataTable className="text-info bg-light"
                                       scrollX
-                            //scrollY
                                       maxHeight="40vh"
-                            //maxWidth=""
                                       striped
                                       bordered
                                       small
                                       hover
                                       theadColor={"text-dark"}
                                       tbodyColor={"text-primary"}
-
-                            // borderless
-                            // //barReverse
-                            // autoWidth
-                            // displayEntries
-                            // entries={8}
-                            // fixed
-                            // entrieslabel={"tak"}
-                            // //info={false}
-                            // noBottomColumns={false}
-                            // pagesAmount={1}
-                            // paging={true}
-                            // responsive={false}
-                            // responsiveSm={true}
-                            // searchingLabel={"text"}
-                            // onSearch={"taks"}
-
                                       data={data}
                                       variant="dark"
-                            //searching={false}
-                            //sorting="false"
                                       pagination="false"
-                            //red-text
                         />
 
                     </Card.Body>

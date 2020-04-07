@@ -1,0 +1,15 @@
+.signIn {
+    text-decoration: underline;
+    color: #61dafb;
+    text-align: right;
+}
+
+.widthForm {
+    min-width: 400px;
+    max-width: 50%;
+    
+}
+
+.widthLineSearchFSP {
+    max-width: 70%;
+}

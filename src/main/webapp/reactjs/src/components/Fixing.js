@@ -41,7 +41,7 @@ export default class Fixing extends Component {
             optionsHandleDisciplineName: 0,
             optionsHandleHoursName: "0",
             optionsHandleLessonName: "0"
-        })
+        });
     };
 
     componentDidMount() {
@@ -52,11 +52,6 @@ export default class Fixing extends Component {
             this.findFixingById(fixingId);
         }
     }
-
-    // componentWillUpdate() {
-    //     //this.setState({"show":false});
-    //     console.log("actions >>>")
-    // }
 
     findFixingById = (fixingId) => {
         axios.get('http://localhost:8080/fixing/'+fixingId)
@@ -180,6 +175,7 @@ export default class Fixing extends Component {
     };
 
     handleTeacherName = e =>{
+        console.log(e.target.value);
         this.setState({optionsHandleTeacherName:e.target.value});
         e.target.blur();
     };
@@ -226,9 +222,9 @@ export default class Fixing extends Component {
                                             onChange={this.handleTeacherName}
                                             value={this.state.optionsHandleTeacherName}
                                     >
-                                        <option>Select Teacher Name</option>
+                                        <option value={0} disabled>Select Teacher Name</option>
                                         {
-                                            this.state.teachers.map((teacher, ind) => {
+                                            this.state.allTeachers = this.state.teachers.map((teacher, ind) => {
                                                 return (<option key={ind} value={teacher.id}>
                                                     {teacher.firstName} {teacher.secondName} {teacher.patronymic}
                                                 </option>)
@@ -252,7 +248,7 @@ export default class Fixing extends Component {
                                             onChange={this.handleDisciplineName}
                                             value={this.state.optionsHandleDisciplineName}
                                     >
-                                        <option>Select Discipline Name</option>
+                                        <option value={0} disabled>Select Discipline Name</option>
                                         {
                                             this.state.disciplines.map((discipline, ind) => {
                                                 return (
@@ -279,7 +275,7 @@ export default class Fixing extends Component {
                                             onChange={this.handleHoursName}
                                             value={this.state.optionsHandleHoursName}
                                     >
-                                        <option value={"0"}>Select Hours</option>
+                                        <option value={"0"} disabled>Select Hours</option>
                                         {
                                             this.state.disciplines.map((discipline, ind) => {
                                                 return (Number(discipline.id) === Number(this.state.optionsHandleDisciplineName) ? (

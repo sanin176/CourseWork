@@ -20,7 +20,7 @@ export default class FixingList extends Component {
         this.findAllDisciplines()
     }
 
-    assembleDisciplines = () => {
+    assembleFixings = () => {
         let fixings =this.state.fixings.map((fixing) => {
             return (
                 {
@@ -49,7 +49,7 @@ export default class FixingList extends Component {
             .then(response => {
                 if(response.data != null) {
                     this.setState({"show":true});
-                    setTimeout(() => this.setState({"show":false}), 500);
+                    setTimeout(() => this.setState({"show":false}), 3000);
                     //alert("Teacher deleted successfully.");
                     this.setState({
                         //teachers: this.state.teachers.filter(teacher => teacher.id !== teacherId)
@@ -68,7 +68,7 @@ export default class FixingList extends Component {
             .then(data => {this.setState({fixings: data});})
             .then(async() => {
                 this.setState({
-                    fixings:this.assembleDisciplines(),
+                    fixings:this.assembleFixings(),
                     isLoading:false })
             });
     };
@@ -107,57 +107,6 @@ export default class FixingList extends Component {
                     field: 'action',
                     width: 70
                 }
-
-
-            //     amount: ++this.state.counter,
-            // id: fixing.id,
-            // name: fixing.teacher.name,
-            // viewWork: fixing.discipline.firstName,
-
-
-                //     name: discipline.name,
-                // forWhichSpecialty: discipline.forWhichSpecialty,
-                // hoursLabs: discipline.hoursLPL.hoursLabs,
-                // hoursLecture: discipline.hoursLPL.hoursLecture,
-                // hoursPractice: discipline.hoursLPL.hoursPractice,
-                // hoursCourse: discipline.hoursZCE.hoursCourse,
-                // hoursExam: discipline.hoursZCE.hoursExam,
-                // hoursZachet: discipline.hoursZCE.hoursZachet,
-
-
-
-
-
-                // {
-                //     label: 'Hours lecture',
-                //     field: 'hoursLecture',
-                //     width: 120
-                // },
-                // {
-                //     label: 'Hours practice',
-                //     field: 'hoursPractice',
-                //     width: 130
-                // },
-                // {
-                //     label: 'Hours course',
-                //     field: 'hoursCourse',
-                //     width: 120
-                // },
-                // {
-                //     label: 'Hours exam',
-                //     field: 'hoursExam',
-                //     width: 120
-                // },
-                // {
-                //     label: 'Hours zachet',
-                //     field: 'hoursZachet',
-                //     width: 120
-                // },
-                // {
-                //     label: 'Action',
-                //     field: 'action',
-                //     width: 70
-                // }
             ],
 
             rows: this.state.fixings
@@ -166,7 +115,7 @@ export default class FixingList extends Component {
 
         const marginBottom = {
             marginBottom: "60px"
-        }
+        };
 
         return (
             <div>
@@ -178,38 +127,16 @@ export default class FixingList extends Component {
                     <Card.Body>
                         <MDBDataTable className="text-info bg-light"
                                       scrollX
-                            //scrollY
                                       maxHeight="40vh"
-                            //maxWidth=""
                                       striped
                                       bordered
                                       small
                                       hover
                                       theadColor={"text-dark"}
                                       tbodyColor={"text-primary"}
-
-                            // borderless
-                            // //barReverse
-                            // autoWidth
-                            // displayEntries
-                            // entries={8}
-                            // fixed
-                            // entrieslabel={"tak"}
-                            // //info={false}
-                            // noBottomColumns={false}
-                            // pagesAmount={1}
-                            // paging={true}
-                            // responsive={false}
-                            // responsiveSm={true}
-                            // searchingLabel={"text"}
-                            // onSearch={"taks"}
-
                                       data={data}
                                       variant="dark"
-                            //searching={false}
-                            //sorting="false"
                                       pagination="false"
-                            //red-text
                         />
 
                     </Card.Body>

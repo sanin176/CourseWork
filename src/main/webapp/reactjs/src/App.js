@@ -14,11 +14,13 @@ import Discipline from "./components/Discipline";
 import DisciplineList from "./components/DisciplineList";
 import Fixing from "./components/Fixing";
 import FixingList from "./components/FixingList";
+import Autorization from "./components/Autorization";
+import PageForTeacher from "./components/PageForTeacher";
 
 function App() {
     const marginTop = {
         marginTop: "20px"
-    }
+    };
 
   return (
       <Router>
@@ -40,6 +42,9 @@ function App() {
                           <Route path="/addFix" exact component={Fixing}/>
                           <Route path="/editFix/:id" exact component={Fixing}/>
                           <Route path="/listFix" exact component={FixingList}/>
+
+                          <Route path="/autorization" exact component={Autorization}/>
+                          <Route path="/pageTeacher" exact component={PageForTeacher}/>
                       </Switch>
                   </Col>
               </Row>

@@ -8,7 +8,7 @@ export default class Footer extends Component {
             <Navbar fixed="bottom" bg="dark" variant="dark">
                 <Container>
                     <Col lg={12} className="text-center text-muted">
-                        <div>{fullYear - 1} - {fullYear}, All Right Reserved by Almighty Java</div>
+                        <div>{fullYear - 1} - {fullYear}, All Right Reserved by Alex Zdit, Java Spring and React</div>
                     </Col>
                 </Container>
             </Navbar>
