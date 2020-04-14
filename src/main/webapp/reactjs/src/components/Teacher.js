@@ -121,7 +121,7 @@ export default class Teacher extends Component {
     render() {
         const marginBottom = {
             marginBottom: "60px"
-        }
+        };
 
         return (
             <div>

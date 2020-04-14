@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import '../styles/style.css'
-import {Card, Form, Jumbotron} from "react-bootstrap";
+import {Button, Card, Form, Jumbotron} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faList} from "@fortawesome/free-solid-svg-icons";
 import {MDBDataTable} from "mdbreact";
@@ -10,11 +10,14 @@ export default class PageForTeacher extends Component {
         super(props);
         this.state = {
             fixings : [],
+            fixingsShow: [],
             counter: 0,
-            value: ''
+            value: '',
+            bool: true
         };
 
         this.handleTextLine = this.handleTextLine.bind(this);
+        this.handleChoiceFixingList = this.handleChoiceFixingList.bind(this);
     }
 
     componentDidMount() {
@@ -22,7 +25,7 @@ export default class PageForTeacher extends Component {
     }
 
     assembleFixings = () => {
-        let fixings =this.state.fixings.map((fixing) => {
+        let fixings = this.state.fixings.map((fixing) => {
             return (
                 {
                     amount: ++this.state.counter,
@@ -34,11 +37,8 @@ export default class PageForTeacher extends Component {
                     viewWorkName: fixing.viewWork
                 }
             )
-
         });
-
         return fixings;
-
     };
 
     findAllDisciplines = () => {
@@ -55,7 +55,19 @@ export default class PageForTeacher extends Component {
 
     handleTextLine(event) {
         this.setState({value: event.target.value});
-        console.log(event.target.value);
+        console.log("event.target.value -> " + event.target.value);
+        console.log("this.state.value -> " + this.state.value);
+    }
+
+    handleChoiceFixingList(e) {
+        console.log(this.state.value);
+        let searchText = this.state.value.replace(/[[\]\\]/g, ' ');
+        this.setState({fixingsShow : this.state.fixings.map((fixing) => {
+                    let text = fixing.teacherName;
+                    return searchText === text ? fixing : undefined;
+                }
+            )});
+
     }
 
     render() {
@@ -88,7 +100,11 @@ export default class PageForTeacher extends Component {
                 }
             ],
 
-            rows: this.state.fixings
+            rows: (this.state.fixingsShow.length === 0 ? undefined : this.state.fixingsShow)
+                // (this.state.bool === false ? undefined :
+                //     (this.state.value.length === 0 ? undefined :
+                //         (this.state.fixingsShow.length === 0 ? undefined : this.state.fixingsShow)))
+            //this.state.fixings
 
         };
 
@@ -102,10 +118,11 @@ export default class PageForTeacher extends Component {
                     <Form>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">First, Second name and Patronymic</label>
-                            <input type="email" className="widthLineSearchFSP mr-auto form-control" id="exampleInputEmail1"
+                            <input type="text" className="widthLineSearchFSP mr-auto form-control" id="exampleInputEmail1"
                                    aria-describedby="emailHelp" placeholder="Input please..."
                                    value={this.state.value} onChange={this.handleTextLine}/>
                             <small id="emailHelp" className="form-text text-muted">Absolute protection.</small>
+                            <Button className="buttonUnderInput" onClick={this.handleChoiceFixingList}>Execute</Button>
                         </div>
                     </Form>
                     <hr className="my-4"/>
@@ -114,7 +131,7 @@ export default class PageForTeacher extends Component {
                         <Card.Body>
                             <MDBDataTable className="text-info bg-light"
                                           scrollX
-                                          maxHeight="30vh"
+                                          maxHeight="25vh"
                                           striped
                                           bordered
                                           small
@@ -126,7 +143,6 @@ export default class PageForTeacher extends Component {
                                           searching={false}
                                           pagination="false"
                             />
-
                         </Card.Body>
                     </Card>
                 </Jumbotron>

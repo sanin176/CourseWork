@@ -13,3 +13,7 @@
 .widthLineSearchFSP {
     max-width: 70%;
 }
+
+.buttonUnderInput {
+    margin-top: 10px;
+}

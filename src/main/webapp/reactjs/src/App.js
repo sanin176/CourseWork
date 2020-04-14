@@ -17,42 +17,57 @@ import FixingList from "./components/FixingList";
 import Autorization from "./components/Autorization";
 import PageForTeacher from "./components/PageForTeacher";
 
-function App() {
+import {connect, Provider} from "react-redux";
+import bindActionCreators from "redux/src/bindActionCreators";
+import store from "./redux/store/store";
+
+
+function App(props) {
     const marginTop = {
         marginTop: "20px"
     };
 
-  return (
-      <Router>
-          <NavigationBar/>
-          <Container>
-              <Row>
-                  <Col lg={12} style={marginTop}>
-                      <Switch>
-                          <Route path="/" exact component={Welcome}/>
+    // let {store} = this.props
 
-                          <Route path="/add" exact component={Teacher}/>
-                          <Route path="/edit/:id" exact component={Teacher}/>
-                          <Route path="/list" exact component={TeacherList}/>
+    return (
+        <Provider store={store}>
+            <Router>
+                <NavigationBar loggedIn={props.loggedIn}/>
+                <Container>
+                    <Row>
+                        <Col lg={12} style={marginTop}>
+                            <Switch>
+                                <Route path="/" exact component={Welcome}/>
 
-                          <Route path="/addDis" exact component={Discipline}/>
-                          <Route path="/editDis/:id" exact component={Discipline}/>
-                          <Route path="/listDis" exact component={DisciplineList}/>
+                                <Route path="/add" exact component={Teacher}/>
+                                <Route path="/edit/:id" exact component={Teacher}/>
+                                <Route path="/list" exact component={TeacherList}/>
 
-                          <Route path="/addFix" exact component={Fixing}/>
-                          <Route path="/editFix/:id" exact component={Fixing}/>
-                          <Route path="/listFix" exact component={FixingList}/>
+                                <Route path="/addDis" exact component={Discipline}/>
+                                <Route path="/editDis/:id" exact component={Discipline}/>
+                                <Route path="/listDis" exact component={DisciplineList}/>
 
-                          <Route path="/autorization" exact component={Autorization}/>
-                          <Route path="/pageTeacher" exact component={PageForTeacher}/>
-                      </Switch>
-                  </Col>
-              </Row>
-          </Container>
-          <Footer/>
-      </Router>
+                                <Route path="/addFix" exact component={Fixing}/>
+                                <Route path="/editFix/:id" exact component={Fixing}/>
+                                <Route path="/listFix" exact component={FixingList}/>
 
-  );
+                                <Route path="/autorization" exact
+                                       component={() => <Autorization loggedIn={props.loggedIn}/>}/>
+                                <Route path="/pageTeacher" exact component={PageForTeacher}/>
+                            </Switch>
+                        </Col>
+                    </Row>
+                </Container>
+                <Footer/>
+            </Router>
+        </Provider>
+    );
 }
 
-export default App;
+const putDispatchToProps = dispatch => bindActionCreators({}, dispatch);
+const putStateToProps = (state) => {
+    return {
+        loggedIn: state.loggedIn,
+    }
+};
+export default connect(putStateToProps, putDispatchToProps)(App);
