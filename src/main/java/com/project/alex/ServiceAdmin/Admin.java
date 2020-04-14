@@ -11,9 +11,9 @@ import javax.persistence.Id;
 @Data
 @Entity
 @Component
-public class Admins {
+public class Admin {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO, generator = "admin")
+    @GeneratedValue(strategy= GenerationType.AUTO, generator = "admins")
     private int id;
     private String name;
     private String login;

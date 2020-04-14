@@ -1,7 +1,9 @@
 package com.project.alex.Controllers;
 
+import com.project.alex.ServiceAdmin.Admin;
 import com.project.alex.ServiceDiscipline.Discipline;
 import com.project.alex.ServiceFixing.Fixing;
+import com.project.alex.ServiceHibernate.AdminRepository;
 import com.project.alex.ServiceHibernate.DisciplineRepository;
 import com.project.alex.ServiceHibernate.FixingRepository;
 import com.project.alex.ServiceHibernate.TeacherRepository;
@@ -25,6 +27,9 @@ public class TeacherController {
     @Autowired
     private FixingRepository fixingRepository;
 
+    @Autowired
+    private AdminRepository adminRepository;
+
     @RequestMapping(value = { "/createTeacher"}, method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public void createTeacher(@RequestBody Teacher t){
@@ -32,7 +37,7 @@ public class TeacherController {
     }
 
     @RequestMapping(value = { "/teachers"}, method = RequestMethod.GET)
-    public @ResponseBody Iterable<Teacher> getAllTeacher(){
+    public @ResponseBody Iterable<Teacher> getAllTeachers(){
         return teacherRepository.findAll();
     }
 
@@ -65,12 +70,12 @@ public class TeacherController {
     }
 
     @RequestMapping(value = { "/disciplines"}, method = RequestMethod.GET)
-    public @ResponseBody Iterable<Discipline> getAllDiscipline(){
+    public @ResponseBody Iterable<Discipline> getAllDisciplines(){
         return disciplineRepository.findAll();
     }
 
     @RequestMapping(value = { "/discipline/{id}"}, method = RequestMethod.GET)
-    public @ResponseBody Optional<Discipline> getDisciplinesByID(@PathVariable("id") int id){
+    public @ResponseBody Optional<Discipline> getDisciplineByID(@PathVariable("id") int id){
         return disciplineRepository.findById(id);
     }
 
@@ -93,17 +98,16 @@ public class TeacherController {
     @RequestMapping(value = {"/createFixing"}, method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public void createFixing(@RequestBody Fixing f){
-        System.out.println("----------------------------------------------Otvet: ");
         fixingRepository.save(f);
     }
 
     @RequestMapping(value = { "/fixings"}, method = RequestMethod.GET)
-    public @ResponseBody Iterable<Fixing> getAllFixing(){
+    public @ResponseBody Iterable<Fixing> getAllFixings(){
         return fixingRepository.findAll();
     }
 
     @RequestMapping(value = { "/fixing/{id}"}, method = RequestMethod.GET)
-    public @ResponseBody Optional<Fixing> getFixingsByID(@PathVariable("id") int id){
+    public @ResponseBody Optional<Fixing> getFixingByID(@PathVariable("id") int id){
         return fixingRepository.findById(id);
     }
 
@@ -115,8 +119,38 @@ public class TeacherController {
 
     @RequestMapping(value = { "/putFixing"}, method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
-    public void putDiscipline(@RequestBody Fixing f){
+    public void putFixing(@RequestBody Fixing f){
         fixingRepository.save(f);
     }
 
+
+
+
+    @RequestMapping(value = {"/createAdmin"}, method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createAdmin(@RequestBody Admin a){
+        adminRepository.save(a);
+    }
+
+    @RequestMapping(value = { "/admins"}, method = RequestMethod.GET)
+    public @ResponseBody Iterable<Admin> getAllAdmins(){
+        return adminRepository.findAll();
+    }
+
+    @RequestMapping(value = { "/admin/{id}"}, method = RequestMethod.GET)
+    public @ResponseBody Optional<Admin> getAdminByID(@PathVariable("id") int id){
+        return adminRepository.findById(id);
+    }
+
+    @RequestMapping(value = { "/deleteAdmin/{id}"}, method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteAdminByID(@PathVariable("id") int id){
+        adminRepository.deleteById(id);
+    }
+
+    @RequestMapping(value = { "/putAdmin"}, method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.OK)
+    public void putAdmin(@RequestBody Admin a){
+        adminRepository.save(a);
+    }
 }

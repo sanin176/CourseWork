@@ -2,23 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="990dda9a-972f-4bb1-876f-7917c5c6bb1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Autorization.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/PageForTeacher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceAdmin/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceHibernate/AdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/redux/actions/action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/redux/reducers/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/redux/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/alex/Controllers/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/alex/Controllers/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceHibernate/FixingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/alex/ServiceHibernate/FixingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Discipline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Discipline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/DisciplineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/DisciplineList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Fixing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Fixing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/FixingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/FixingList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Autorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Autorization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/MyToast.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/MyToast.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/TeacherList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/TeacherList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/PageForTeacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/PageForTeacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Teacher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/components/Welcome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reactjs/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reactjs/src/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/alex/Controllers/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/alex/Controllers/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceHibernate/FixingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/alex/ServiceHibernate/FixingRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,9 +90,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -141,16 +145,18 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src/components" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.project.alex.ServiceHibernate" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src/redux/store" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src/redux/reducers" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src/redux/actions" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/reactjs/src/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,7 +228,13 @@
       <workItem from="1585981651609" duration="32487000" />
       <workItem from="1586064044990" duration="36458000" />
       <workItem from="1586154616901" duration="16799000" />
-      <workItem from="1586237424742" duration="36019000" />
+      <workItem from="1586237424742" duration="36767000" />
+      <workItem from="1586326381266" duration="11579000" />
+      <workItem from="1586411565885" duration="12563000" />
+      <workItem from="1586535825386" duration="6893000" />
+      <workItem from="1586674042273" duration="28176000" />
+      <workItem from="1586763526937" duration="1513000" />
+      <workItem from="1586841791117" duration="23641000" />
     </task>
     <servers />
   </component>
@@ -238,10 +250,10 @@
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="440" y="182" key="#Inspections/0.23.1680.985@0.23.1680.985" timestamp="1586157817206" />
-    <state x="440" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585118865570">
+    <state x="440" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586436644215">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state x="440" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.985@0.23.1680.985" timestamp="1585118865570" />
+    <state x="440" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.985@0.23.1680.985" timestamp="1586436644215" />
     <state x="550" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585676009007">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
@@ -258,54 +270,54 @@
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="653" y="120" key="CommitChangelistDialog2/0.23.1680.985@0.23.1680.985" timestamp="1586248302343" />
-    <state width="1319" height="179" key="GridCell.Tab.0.bottom" timestamp="1586266735491">
+    <state width="876" height="179" key="GridCell.Tab.0.bottom" timestamp="1586803895335">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.0.bottom/0.23.1680.985@0.23.1680.985" timestamp="1586266735491" />
-    <state width="1319" height="179" key="GridCell.Tab.0.center" timestamp="1586266735490">
+    <state width="876" height="179" key="GridCell.Tab.0.bottom/0.23.1680.985@0.23.1680.985" timestamp="1586803895335" />
+    <state width="876" height="179" key="GridCell.Tab.0.center" timestamp="1586803895334">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.0.center/0.23.1680.985@0.23.1680.985" timestamp="1586266735490" />
-    <state width="1319" height="179" key="GridCell.Tab.0.left" timestamp="1586266735490">
+    <state width="876" height="179" key="GridCell.Tab.0.center/0.23.1680.985@0.23.1680.985" timestamp="1586803895334" />
+    <state width="876" height="179" key="GridCell.Tab.0.left" timestamp="1586803895334">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.0.left/0.23.1680.985@0.23.1680.985" timestamp="1586266735490" />
-    <state width="1319" height="179" key="GridCell.Tab.0.right" timestamp="1586266735491">
+    <state width="876" height="179" key="GridCell.Tab.0.left/0.23.1680.985@0.23.1680.985" timestamp="1586803895334" />
+    <state width="876" height="179" key="GridCell.Tab.0.right" timestamp="1586803895335">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.0.right/0.23.1680.985@0.23.1680.985" timestamp="1586266735491" />
-    <state width="1319" height="179" key="GridCell.Tab.1.bottom" timestamp="1586266735492">
+    <state width="876" height="179" key="GridCell.Tab.0.right/0.23.1680.985@0.23.1680.985" timestamp="1586803895335" />
+    <state width="876" height="179" key="GridCell.Tab.1.bottom" timestamp="1586803895336">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.1.bottom/0.23.1680.985@0.23.1680.985" timestamp="1586266735492" />
-    <state width="1319" height="179" key="GridCell.Tab.1.center" timestamp="1586266735492">
+    <state width="876" height="179" key="GridCell.Tab.1.bottom/0.23.1680.985@0.23.1680.985" timestamp="1586803895336" />
+    <state width="876" height="179" key="GridCell.Tab.1.center" timestamp="1586803895335">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.1.center/0.23.1680.985@0.23.1680.985" timestamp="1586266735492" />
-    <state width="1319" height="179" key="GridCell.Tab.1.left" timestamp="1586266735492">
+    <state width="876" height="179" key="GridCell.Tab.1.center/0.23.1680.985@0.23.1680.985" timestamp="1586803895335" />
+    <state width="876" height="179" key="GridCell.Tab.1.left" timestamp="1586803895335">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.1.left/0.23.1680.985@0.23.1680.985" timestamp="1586266735492" />
-    <state width="1319" height="179" key="GridCell.Tab.1.right" timestamp="1586266735492">
+    <state width="876" height="179" key="GridCell.Tab.1.left/0.23.1680.985@0.23.1680.985" timestamp="1586803895335" />
+    <state width="876" height="179" key="GridCell.Tab.1.right" timestamp="1586803895335">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="1319" height="179" key="GridCell.Tab.1.right/0.23.1680.985@0.23.1680.985" timestamp="1586266735492" />
-    <state width="764" height="328" key="GridCell.Tab.2.bottom" timestamp="1586243350798">
+    <state width="876" height="179" key="GridCell.Tab.1.right/0.23.1680.985@0.23.1680.985" timestamp="1586803895335" />
+    <state width="764" height="328" key="GridCell.Tab.2.bottom" timestamp="1586288930246">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="764" height="328" key="GridCell.Tab.2.bottom/0.23.1680.985@0.23.1680.985" timestamp="1586243350798" />
-    <state width="764" height="328" key="GridCell.Tab.2.center" timestamp="1586243350797">
+    <state width="764" height="328" key="GridCell.Tab.2.bottom/0.23.1680.985@0.23.1680.985" timestamp="1586288930246" />
+    <state width="764" height="328" key="GridCell.Tab.2.center" timestamp="1586288930245">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="764" height="328" key="GridCell.Tab.2.center/0.23.1680.985@0.23.1680.985" timestamp="1586243350797" />
-    <state width="764" height="328" key="GridCell.Tab.2.left" timestamp="1586243350797">
+    <state width="764" height="328" key="GridCell.Tab.2.center/0.23.1680.985@0.23.1680.985" timestamp="1586288930245" />
+    <state width="764" height="328" key="GridCell.Tab.2.left" timestamp="1586288930245">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="764" height="328" key="GridCell.Tab.2.left/0.23.1680.985@0.23.1680.985" timestamp="1586243350797" />
-    <state width="764" height="328" key="GridCell.Tab.2.right" timestamp="1586243350797">
+    <state width="764" height="328" key="GridCell.Tab.2.left/0.23.1680.985@0.23.1680.985" timestamp="1586288930245" />
+    <state width="764" height="328" key="GridCell.Tab.2.right" timestamp="1586288930246">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state width="764" height="328" key="GridCell.Tab.2.right/0.23.1680.985@0.23.1680.985" timestamp="1586243350797" />
+    <state width="764" height="328" key="GridCell.Tab.2.right/0.23.1680.985@0.23.1680.985" timestamp="1586288930246" />
     <state width="239" height="498" key="HiddenNamespacesPopup" timestamp="1585118977434">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
@@ -330,10 +342,10 @@
       <screen x="0" y="23" width="1680" height="985" />
     </state>
     <state x="702" y="286" key="com.intellij.database.view.ui.DbObjectDialog/0.23.1680.985@0.23.1680.985" timestamp="1585118961908" />
-    <state x="494" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1586237429536">
+    <state x="494" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1586841791491">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
-    <state x="494" y="296" key="com.intellij.ide.util.TipDialog/0.23.1680.985@0.23.1680.985" timestamp="1586237429536" />
+    <state x="494" y="296" key="com.intellij.ide.util.TipDialog/0.23.1680.985@0.23.1680.985" timestamp="1586841791491" />
     <state x="1022" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586004005619">
       <screen x="0" y="23" width="1680" height="985" />
     </state>
