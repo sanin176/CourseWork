@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import {Button, Form} from "react-bootstrap";
+import {Button, Form, Navbar} from "react-bootstrap";
 import '../styles/style.css'
 import {connect} from "react-redux";
 import {Link, Redirect} from "react-router-dom";
+import bindActionCreators from "redux/src/bindActionCreators";
 
 
 class Autorization extends Component {
@@ -24,11 +25,25 @@ class Autorization extends Component {
     handleSubmit = (e) => {
         console.log(this.state.login);
         console.log(this.state.password);
+        // this.state.login === "1" ?
+        //     (this.state.password === "2" ?
+        //         (this.props.dispatch({type: 'SET_LOGGED_IN', loggedIn: true}))
+        //         : console.log("Error 2"))
+        //     : console.log("Error 1");
+
         this.state.login === "1" ?
             (this.state.password === "2" ?
                 (this.props.dispatch({type: 'SET_LOGGED_IN', loggedIn: true}))
                 : console.log("Error 2"))
             : console.log("Error 1");
+
+        this.state.login === "1" ?
+            (this.state.password === "2" ?
+                (localStorage.setItem('loggedIn',true))
+                : console.log("Error 2"))
+            : console.log("Error 1");
+        // this.props.state.loggedIn(true);
+
     };
 
     handleLogin(e) {
@@ -48,10 +63,16 @@ class Autorization extends Component {
             this.props.loggedIn ?
 
                 <div>
+                    <div>
+                        {console.log("Autorization with Redirect -> " + this.props.loggedIn)}
+                    </div>
                     <Redirect to="/"/>
                 </div>
                 :
                 <div className="jumbotron widthForm mx-auto" style={marginBottom}>
+                    <div>
+                        {console.log("Autorization without Redirect --> " + this.props.loggedIn)}
+                    </div>
                     <Form>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>

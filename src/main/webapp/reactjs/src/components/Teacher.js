@@ -13,6 +13,8 @@ export default class Teacher extends Component {
         this.state = this.initialState;
         this.teacherChange = this.teacherChange.bind(this);
         this.submitTeacher = this.submitTeacher.bind(this);
+        this.handleSexName = this.handleSexName.bind(this);
+        this.handlePositionName = this.handlePositionName.bind(this);
     }
 
     initialState = {
@@ -20,38 +22,38 @@ export default class Teacher extends Component {
         firstName: '',
         secondName: '',
         patronymic: '',
-        position: '',
-        sex: '',
+        position: "0",
+        sex: "0",
         date: ''
     };
 
     componentDidMount() {
         const teacherId = +this.props.match.params.id;
         console.log(teacherId);
-        if(teacherId){
+        if (teacherId) {
             this.findTeacherById(teacherId);
         }
     }
 
     findTeacherById = (teacherId) => {
-        axios.get('http://localhost:8080/teacher/'+teacherId)
+        axios.get('http://localhost:8080/teacher/' + teacherId)
             .then(response => {
                 console.log("Response: " + response.data + "!");
-                if(response.data != null){
+                if (response.data != null) {
                     console.log(response.data);
-                    this.setState ({
+                    this.setState({
                         id: response.data.id,
                         firstName: response.data.firstName,
                         secondName: response.data.secondName,
                         patronymic: response.data.patronymic,
                         position: response.data.position,
                         sex: response.data.sex,
-                        date: response.data.date.replace(/(\d+).(\d+).(\d+).*/,'$1-$2-$3')
+                        date: response.data.date.replace(/(\d+).(\d+).(\d+).*/, '$1-$2-$3')
                     });
                 }
             }).catch((error) => {
-                console.error("Error - "+error);
-            });
+            console.error("Error - " + error);
+        });
     };
 
     resetTeacher = () => {
@@ -73,10 +75,10 @@ export default class Teacher extends Component {
         axios.post("http://localhost:8080/createTeacher", teacher)
             .then(response => {
                 if (response.data != null) {
-                    this.setState({"show":true, "method":"post"});
-                    setTimeout(() => this.setState({"show":false}), 3000);
+                    this.setState({"show": true, "method": "post"});
+                    setTimeout(() => this.setState({"show": false}), 3000);
                 } else {
-                    this.setState({"show":false});
+                    this.setState({"show": false});
                 }
             });
         this.setState(this.initialState);
@@ -98,11 +100,11 @@ export default class Teacher extends Component {
         axios.put("http://localhost:8080/putTeacher", teacher)
             .then(response => {
                 if (response.data != null) {
-                    this.setState({"show":true});
+                    this.setState({"show": true});
                     setTimeout(() => this.teacherList(), 3000);
-                    setTimeout(() => this.setState({"show":false}), 3000);
+                    setTimeout(() => this.setState({"show": false}), 3000);
                 } else {
-                    this.setState({"show":false});
+                    this.setState({"show": false});
                 }
             });
         this.setState(this.initialState);
@@ -118,6 +120,16 @@ export default class Teacher extends Component {
         return this.props.history.push("/list");
     };
 
+    handleSexName = e => {
+        this.setState({optionsHandleSexName: e.target.value});
+        e.target.blur();
+    };
+
+    handlePositionName = e => {
+        this.setState({optionsHandlePositionName: e.target.value});
+        e.target.blur();
+    };
+
     render() {
         const marginBottom = {
             marginBottom: "60px"
@@ -126,12 +138,17 @@ export default class Teacher extends Component {
         return (
             <div>
                 <div style={{"display": this.state.show ? "block" : "none"}}>
-                    <MyToast show = {this.state.show} message={this.state.method === "put" ? "Teacher Update Successfully." : "Teacher Saved Successfully."} type = {"success"}/>
+                    <MyToast show={this.state.show}
+                             message={this.state.method === "put" ? "Teacher Update Successfully." : "Teacher Saved Successfully."}
+                             type={"success"}/>
                 </div>
 
                 <Card className={"border border-dark bg-light text-dark"} style={marginBottom}>
-                    <Card.Header><FontAwesomeIcon icon={this.state.id ? faEdit : faPlusSquare}/> {this.state.id ? "Update Teacher" : "Add Teacher"}</Card.Header>
-                    <Form onReset={this.resetTeacher} onSubmit={this.state.id ? this.updateTeacher : this.submitTeacher} id="teacherFormId">
+                    <Card.Header><FontAwesomeIcon
+                        icon={this.state.id ? faEdit : faPlusSquare}/> {this.state.id ? "Update Teacher" : "Add Teacher"}
+                    </Card.Header>
+                    <Form onReset={this.resetTeacher} onSubmit={this.state.id ? this.updateTeacher : this.submitTeacher}
+                          id="teacherFormId">
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formGridAuthor">
@@ -171,34 +188,66 @@ export default class Teacher extends Component {
                                                   placeholder="Enter Teacher Patronymic"/>
                                 </Form.Group>
                             </Form.Row>
-                            <Form.Row>
+                            {/*<Form.Row>*/}
 
-                                <Form.Group as={Col} controlId="formGridPrice">
+                            {/*    <Form.Group as={Col} controlId="formGridPrice">*/}
+                            {/*        <Form.Label>Position</Form.Label>*/}
+                            {/*        <Form.Control required*/}
+                            {/*                      type="test"*/}
+                            {/*                      name="position"*/}
+                            {/*                      value={this.state.position}*/}
+                            {/*                      onChange={this.teacherChange}*/}
+                            {/*                      className={"bg-light text-primary"}*/}
+                            {/*                      placeholder="Enter Teacher Position"/>*/}
+                            {/*    </Form.Group>*/}
+                            {/*</Form.Row>*/}
+                            {/*<Form.Row>*/}
+
+                            {/*    <Form.Group as={Col} controlId="formGridLanguage">*/}
+                            {/*        <Form.Label>Sex</Form.Label>*/}
+                            {/*        <Form.Control required*/}
+                            {/*                      type="test"*/}
+                            {/*                      name="sex"*/}
+                            {/*                      value={this.state.sex}*/}
+                            {/*                      onChange={this.teacherChange}*/}
+                            {/*                      className={"bg-light text-primary"}*/}
+                            {/*                      placeholder="Enter Teacher Sex"/>*/}
+                            {/*    </Form.Group>*/}
+                            {/*</Form.Row>*/}
+
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="formGridCoverPhotoURL">
                                     <Form.Label>Position</Form.Label>
-                                    <Form.Control required
-                                                  type="test"
-                                                  name="position"
-                                                  value={this.state.position}
-                                                  onChange={this.teacherChange}
-                                                  className={"bg-light text-primary"}
-                                                  placeholder="Enter Teacher Position"/>
+                                    <select className="form-control"
+                                            onChange={this.handlePositionName}
+                                            value={this.state.position}
+                                    >
+                                        <option value={"0"} disabled>Select Position Name</option>
+                                        <option value={"TraineeTeacher"}>TraineeTeacher</option>
+                                        <option value={"Assistant"}>Assistant</option>
+                                        <option value={"SeniorLecturer"}>SeniorLecturer</option>
+                                        <option value={"AssistantProfessor"}>AssistantProfessor</option>
+                                        <option value={"Professor"}>Professor</option>
+                                        <option value={"Doctor"}>Doctor</option>
+                                    </select>
                                 </Form.Group>
                             </Form.Row>
-                            <Form.Row>
 
-                                <Form.Group as={Col} controlId="formGridLanguage">
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="formGridCoverPhotoURL">
                                     <Form.Label>Sex</Form.Label>
-                                    <Form.Control required
-                                                  type="test"
-                                                  name="sex"
-                                                  value={this.state.sex}
-                                                  onChange={this.teacherChange}
-                                                  className={"bg-light text-primary"}
-                                                  placeholder="Enter Teacher Sex"/>
+                                    <select className="form-control"
+                                            onChange={this.handleSexName}
+                                            value={this.state.sex}
+                                    >
+                                        <option value={"0"} disabled>Select Sex Name</option>
+                                        <option value={"Male"}>Male</option>
+                                        <option value={"Female"}>Female</option>
+                                    </select>
                                 </Form.Group>
                             </Form.Row>
-                            <Form.Row>
 
+                            <Form.Row>
                                 <Form.Group as={Col} controlId="formGridLanguage">
                                     <Form.Label>Date</Form.Label>
                                     <Form.Control required

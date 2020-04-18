@@ -16,6 +16,7 @@ import Fixing from "./components/Fixing";
 import FixingList from "./components/FixingList";
 import Autorization from "./components/Autorization";
 import PageForTeacher from "./components/PageForTeacher";
+import Logout from "./components/Logout";
 
 import {connect, Provider} from "react-redux";
 import bindActionCreators from "redux/src/bindActionCreators";
@@ -27,10 +28,11 @@ function App(props) {
         marginTop: "20px"
     };
 
-    // let {store} = this.props
-
     return (
         <Provider store={store}>
+            <div>
+                {console.log("Otvet -> " + props.loggedIn)}
+            </div>
             <Router>
                 <NavigationBar loggedIn={props.loggedIn}/>
                 <Container>
@@ -50,6 +52,9 @@ function App(props) {
                                 <Route path="/addFix" exact component={Fixing}/>
                                 <Route path="/editFix/:id" exact component={Fixing}/>
                                 <Route path="/listFix" exact component={FixingList}/>
+
+                                <Route path="/logout" exact
+                                       component={() => <Logout loggedIn={props.loggedIn}/>}/>
 
                                 <Route path="/autorization" exact
                                        component={() => <Autorization loggedIn={props.loggedIn}/>}/>

@@ -3,8 +3,14 @@ import {Navbar, Nav, NavDropdown} from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import PSU from '../images/fit-gerb.jpg'
 import '../styles/style.css'
+import {connect} from "react-redux";
 
-export default class NavigationBar extends Component {
+class NavigationBar extends Component {
+    componentDidMount() {
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedIn'));
+        this.props.dispatch({type: 'SET_LOGGED_IN', loggedIn: loggedInUser});
+    }
+
     render() {
         const marginRight = {
             marginRight: "10px"
@@ -25,6 +31,7 @@ export default class NavigationBar extends Component {
 
 
                 <Navbar.Collapse>
+                    {console.log("NavigationBar -> " + this.props.loggedIn)}
                     {
                         (this.props.loggedIn) &&
                         <Nav className="mr-auto">
@@ -42,13 +49,18 @@ export default class NavigationBar extends Component {
                             </NavDropdown>
                             <NavDropdown.Divider/>
                         </Nav>
+
                     }
                     <Nav className="ml-auto">
-                        <Nav.Link href="autorization" className="mr-sm-2">
-                            {
-                                (this.props.loggedIn) ? "Logout" : "sign in"
-                            }
-                        </Nav.Link>
+                        {(this.props.loggedIn) ?
+                            <Nav.Link href="logout" className="mr-sm-2">
+                                Logout
+                            </Nav.Link>
+                            :
+                            <Nav.Link href="autorization" className="mr-sm-2">
+                                sign in
+                            </Nav.Link>
+                        }
                     </Nav>
                 </Navbar.Collapse>
 
@@ -56,3 +68,5 @@ export default class NavigationBar extends Component {
         )
     }
 }
+
+export default connect()(NavigationBar)
